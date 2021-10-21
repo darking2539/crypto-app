@@ -1,3 +1,3 @@
 # Simple Cryptoapp
 
-Link: https://www.youtube.com/
+Link: https://crypto-app-tau.vercel.app/
