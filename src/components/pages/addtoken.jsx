@@ -38,7 +38,7 @@ export default function AddToken() {
         setCurrentCoin(res.data.price);
       })
       .catch((error) => {
-        setCurrentCoin("");
+        setCurrentCoin("Can't find this token");
       });
   }
 
