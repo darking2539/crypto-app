@@ -36,12 +36,16 @@ export default function Portfolio() {
       let currentUSD = parseFloat(buying);
       var Object = {"unit": unit, "currentUSD": currentUSD};
       console.log(typeof currentUSD);
+      console.log(result.isDismissed);
       if (result.isConfirmed && typeof currentUSD == 'number' && unit != "" && code != "") {
         localStorage.setItem(code, JSON.stringify(Object) )
         console.log(code,unit,buying)
         Swal.fire('Saved!', '', 'success')
         window.location.reload(false)
-      } else{
+      } else if(result.isDismissed){
+          //pass
+      }
+      else{
         Swal.fire('Error!', '', 'info')
       }
     })
